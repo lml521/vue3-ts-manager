@@ -13,5 +13,6 @@ module.exports = {
     rules: {
         'no-console': 'off',
         'comma-dangle': [2, 'never'] //禁止使用拖尾逗号
-    }
+    },
+    'vue/no-v-for-template-key': 'off',
 }

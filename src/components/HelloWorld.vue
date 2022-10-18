@@ -17,10 +17,14 @@ const count = ref(0)
 </style> -->
 
 <script setup lang="ts">
+  
 import { ref, computed } from "vue";
-import { useStore } from "../store";
+import { useStore } from "@/store";
+
 const store = useStore();
+
 const count = ref(0);
+
 const showcount = computed(() => {
   return store.getters["getCount"];
 });
@@ -31,5 +35,6 @@ const addBtn = () => {
 <template>
   <p>{{ showcount }}</p>
   <button @click="addBtn">增加</button>
+  <button @click="$router.push('/text')">dianj1</button>
 </template>
 <style scoped></style>
